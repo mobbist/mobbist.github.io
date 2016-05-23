@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>众装科技</title>
+<link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+<meta  name="keywords" content="VR虚拟场景定制专家"/>
+<meta  name="description" content="高画质VR虚拟场景定制专家,
+众装科技制作的虚拟现实样板房在业界受到高度认可，是VR虚拟科,
+技在房地产行业及装修设计行业场景应用中唯一可提供高难度场景实时渲染,
+计算及交互程序设计的创新科技企业，同时也是国内最专业的能为,
+地产开发商及设计行业提供最佳场景效果的VR整体技术解决方案提供商"/>
+<meta />
+</head>
+<body>
+<div class="warp">
+	<div class="main">
+		<div class="header">
+			<h1><a href="./index.html"><img draggable="false" src="./images/logo.png" alt="" /></a></h1>
+			<ul class="nav cb">
+				<li class="li1"><a href="./content.html"></a></li>
+				<li class="li2"><a href="list.html"></a></li>
+				<li class="li3"><a href="aboutus.html"></a></li>
+			</ul>
+		</div>
+		<div class="body">
+			<div class="moive">
+				<div class="movieClick"></div>
+				<div class="jiathisClick"></div>
+			</div>
+		</div>
+		<div class="fx_bg jiathis_style_32x32">
+			<a class="jiathis_button_weixin fx1"></a>
+			<a class="jiathis_button_tsina fx2"></a>
+			<a class="jiathis_button_tsina fx3"></a>
+			<a onClick="copy_clip('www.baidu.com');alert('¹§Ï²£¬¸´ÖÆ³É¹¦£¡');" class="fx4"></a>
+		</div>
+		<div class="moiveBG">	
+			<div class="close"></div>
+			<video id="videoM" src="./moive/11.mp4"  width="1080" height="720" controls preload ></video >
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script src="./js/jquery.js"></script>
+<script type="text/javascript">
+var tiff = true;
+	$(".jiathisClick").click(function(){
+		if(tiff){
+			$(".fx_bg").fadeIn("slow");
+		}else{
+			$(".fx_bg").fadeOut("slow");
+		}
+		tiff = !tiff;
+	})
+
+$(".movieClick").click(function(){	
+	$(".moiveBG").fadeIn("slow");
+	$("#videoM").get(0).play();
+})
+$(".moiveBG .close ").click(function(){	
+	$(".moiveBG").fadeOut("slow");
+	$("#videoM").get(0).pause();
+})
+function copy_clip(txt) {
+    if (window.clipboardData) {
+            window.clipboardData.clearData();
+            window.clipboardData.setData("Text", txt);
+    } else if (navigator.userAgent.indexOf("Opera") != -1) {
+            window.location = txt;
+    } else if (window.netscape) {
+            try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            } catch (e) {
+                    alert("ÄúµÄfirefox°²È«ÏÞÖÆÏÞÖÆÄú½øÐÐ¼ôÌù°å²Ù×÷£¬ÇëÔÚÐÂ´°¿ÚµÄµØÖ·À¸ÀïÊäÈë'about:config'È»ºóÕÒµ½'signed.applets.codebase_principal_support'ÉèÖÃÎªtrue'");
+                    return false;
+            }
+            var clip = Components.classes["@mozilla.org/widget/clipboard;1"].createInstance(Components.interfaces.nsIClipboard);
+            if (!clip)
+                    return;
+            var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
+            if (!trans)
+                    return;
+            trans.addDataFlavor('text/unicode');
+            var str = new Object();
+            var len = new Object();
+            var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+            var copytext = txt;
+            str.data = copytext;
+            trans.setTransferData("text/unicode", str, copytext.length * 2);
+            var clipid = Components.interfaces.nsIClipboard;
+            if (!clip)
+                    return false;
+            clip.setData(trans, null, clipid.kGlobalClipboard);
+    }
+}
+</script>
+</html>
+
+
+<!-- JiaThis Button BEGIN -->
+<!-- JiaThis Button END -->
