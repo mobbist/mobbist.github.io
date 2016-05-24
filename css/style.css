@@ -182,7 +182,7 @@ html{  overflow-x:hidden;}
 .banner2 li:hover .content3{ width: 427px; height: 727px;background: url(../images/content3.jpg) no-repeat  }
 .content_footer{ padding-top: 30px; background: #0f0f0f;padding-bottom: 30px; }
 .content_footer img{   margin:0 auto;}
-.banner3{ width: 1282px; height: 727px; margin:0 auto; overflow: hidden; }
+.banner3{ width: 1281px; height: 727px; margin:0 auto; overflow: hidden; }
 .leftButton{ height:855px; width: 160px; position: absolute; left: 0px; top: 0px; background: url(../images/left_hover.png) no-repeat center center; cursor: pointer;  z-index: 100 }
 .leftButton:hover{  background: url(../images/left.png) no-repeat center center; }
 .rightButton{ height:855px; width: 160px; position: absolute; right: 0px; top: 0px; background: url(../images/right_hover.png) no-repeat center center;  cursor: pointer; z-index: 100 }
